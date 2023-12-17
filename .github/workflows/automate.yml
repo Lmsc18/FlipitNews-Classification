@@ -23,6 +23,10 @@ jobs:
           pip install pytest
           pip install -r requirements.txt
           pip install fastapi typing-extensions httpx
+          python3 -m nltk.downloader stopwords
+          python3 -m nltk.downloader punkt
+          python3 -m nltk.downloader wordnet
+          python3 -m nltk.downloader omw-1.4
 
       - name: Run tests with pytest
         run: pytest
