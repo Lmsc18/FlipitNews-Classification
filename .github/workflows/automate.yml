@@ -18,8 +18,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install pytest
           pip install -r requirements.txt
-          conda install -c conda-forge fastapi typing-extensions
-          conda install -c conda-forge fastapi httpx
+          conda install -c conda-forge --y fastapi typing-extensions
+          conda install -c conda-forge --y fastapi httpx
+
 
       - name: Run tests with pytest
         run: pytest 
